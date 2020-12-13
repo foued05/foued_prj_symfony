@@ -1,0 +1,30 @@
+{% block body %}
+    <h1>ajouter voiture</h1>
+    {{ form_start(form) }}
+
+    <div>
+        {{ form_widget(form.matricule,{'attr':{'placeholder':'matricule de la voiture'}}) }}
+    </div>
+    <div>
+        {{ form_widget(form.marque,{'attr':{'placeholder':'marque de la voiture'}}) }}
+        {{form_errors(form.marque)}}
+    </div>
+    <div>
+        {{ form_widget(form.couleur,{'attr':{'placeholder':'couleur de la voiture'}}) }}
+    </div>
+    <div>
+        {{ form_widget(form.carburant,{'attr':{'placeholder':'carburant de la voiture'}}) }}
+    </div>
+    <div>
+        {{ forl_label(form.datemiseencirculation)}}
+        {{ form_widget(form.datemiseencirculation) }}
+    </div>
+    <div>
+        {{ form_widget(form.nbrplace,{'attr':{'placeholder':'nbr de place'}}) }}
+    </div>
+    <div>
+        <input type="submit" name="" value="enregistrer" class="btn btn-primary">
+    </div>
+
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <h1>
+            Voitures
+        </h1>
+        <ul>
+            {% for voiture in voitures %}
+            <li>
+                {{ voiture.marque|e}} {{ voiture.couleur|e}} {{ voiture.Description|e}} {{ voiture.nbrplace|e}} Places   
+            </li> 
+            {% endfor%}
+        </ul>
+    </body>
+</html>
